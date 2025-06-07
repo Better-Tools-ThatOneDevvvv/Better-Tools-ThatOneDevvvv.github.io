@@ -1,0 +1,76 @@
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --accent: #2e7d32;
+      --border: #e0e0e0;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --fg: #f0f0f0;
+      --accent: #81c784;
+      --border: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      padding-top: 56px;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 56px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      z-index: 1000;
+    }
+
+    .navbar .left,
+    .navbar .right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sidebar-btn {
+      font-size: 20px;
+      background: none;
+      border: none;
+      color: var(--fg);
+      cursor: pointer;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 18px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .search-input {
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--fg);
+      width: 240px;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 16px;
+      color: var(--fg);
+      cursor: pointer;
+    }
