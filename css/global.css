@@ -1,77 +1,162 @@
-    :root {
-      --bg: #ffffff;
-      --fg: #111111;
-      --accent: #2e7d32;
-      --border: #e0e0e0;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
 
-    [data-theme="dark"] {
-      --bg: #121212;
-      --fg: #f0f0f0;
-      --accent: #81c784;
-      --border: #333;
-    }
+  .navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 50px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--fg);
-      padding-top: 56px;
-      -webkit-tap-highlight-color: transparent;
-    }
+  .nav-container {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 60px;
+    white-space: nowrap;
+  }
 
+  .logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .logo:hover {
+    color: #3498db;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+  }
+
+  .nav-link a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #3498db;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link a:hover {
+    color: #3498db;
+  }
+
+  .nav-link a:hover::after {
+    width: 100%;
+  }
+
+  .cta-button {
+    background: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .cta-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+  }
+
+  .mobile-menu span {
+    width: 24px;
+    height: 2px;
+    background: #2c3e50;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
     .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 56px;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      transform: none;
+      max-width: none;
+    }
+
+    .nav-container {
       justify-content: space-between;
-      padding: 0 16px;
-      z-index: 1000;
+      padding: 0 15px;
+      gap: 20px;
     }
 
-    .navbar .left,
-    .navbar .right {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links.active {
       display: flex;
-      align-items: center;
-      gap: 12px;
     }
 
-    .sidebar-btn {
-      font-size: 20px;
-      background: none;
-      border: none;
-      color: var(--fg);
-      cursor: pointer;
+    .mobile-menu {
+      display: flex;
     }
 
-    .logo {
-      font-weight: bold;
-      font-size: 18px;
-      color: var(--accent);
-      text-decoration: none;
+    .mobile-menu.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
     }
 
-    .search-input {
-      padding: 6px 12px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      background: var(--bg);
-      color: var(--fg);
-      width: 240px;
+    .mobile-menu.active span:nth-child(2) {
+      opacity: 0;
     }
 
-    .theme-toggle {
-      background: none;
-      border: 1px solid var(--border);
-      padding: 6px 10px;
-      border-radius: 16px;
-      color: var(--fg);
-      cursor: pointer;
+    .mobile-menu.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
     }
+  }
