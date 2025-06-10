@@ -18,6 +18,7 @@
       background-color: var(--bg);
       color: var(--fg);
       padding-top: 56px;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .navbar {
