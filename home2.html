@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solution Wiki</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">SolutionWiki</h1>
+      <input type="text" placeholder="Search problems..." class="w-1/2 px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300" />
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold mb-4">Browse Categories</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="#" class="bg-white p-4 rounded-xl shadow hover:bg-blue-50 transition">Math</a>
+        <a href="#" class="bg-white p-4 rounded-xl shadow hover:bg-blue-50 transition">Programming</a>
+        <a href="#" class="bg-white p-4 rounded-xl shadow hover:bg-blue-50 transition">Science</a>
+        <a href="#" class="bg-white p-4 rounded-xl shadow hover:bg-blue-50 transition">General Knowledge</a>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold mb-4">Featured Solutions</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="bg-white rounded-xl shadow p-6 hover:shadow-md transition">
+          <h3 class="text-lg font-bold mb-2">How to Solve a Quadratic Equation</h3>
+          <p class="text-sm text-gray-600">A step-by-step guide to solving equations of the form ax² + bx + c = 0...</p>
+          <a href="#" class="text-blue-600 text-sm mt-2 inline-block">Read more →</a>
+        </article>
+        <article class="bg-white rounded-xl shadow p-6 hover:shadow-md transition">
+          <h3 class="text-lg font-bold mb-2">Binary Search Explained</h3>
+          <p class="text-sm text-gray-600">Learn how binary search works and when to use it efficiently...</p>
+          <a href="#" class="text-blue-600 text-sm mt-2 inline-block">Read more →</a>
+        </article>
+        <article class="bg-white rounded-xl shadow p-6 hover:shadow-md transition">
+          <h3 class="text-lg font-bold mb-2">Newton’s Laws of Motion</h3>
+          <p class="text-sm text-gray-600">Understand the three fundamental laws that govern classical mechanics...</p>
+          <a href="#" class="text-blue-600 text-sm mt-2 inline-block">Read more →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t mt-10">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+      <p>&copy; 2025 SolutionWiki. All rights reserved.</p>
+      <div class="space-x-4 mt-2 md:mt-0">
+        <a href="#" class="hover:underline">About</a>
+        <a href="#" class="hover:underline">Contact</a>
+        <a href="#" class="hover:underline">Privacy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
